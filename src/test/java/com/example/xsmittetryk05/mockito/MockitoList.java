@@ -7,8 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class MockitoList {
 
@@ -49,6 +48,7 @@ public class MockitoList {
                 assertEquals("anyelem", listMock.get(i));
             }
         });
+        verify(listMock).get(4);
     }
 
 
